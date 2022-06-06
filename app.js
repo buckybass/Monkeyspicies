@@ -14,10 +14,10 @@ app.use(session({secret:'mysession',resave:false,saveUninitialized:false}))
 app.use(router)
 app.use(express.static(path.join(__dirname, 'public')))
 
-let port = 8008
+let port = process.env.PORT;
 if(port == null || port == ""){
-    port = 8008
+    port = 4000
 }
 app.listen(port, () => {
-    console.log('server is start',port)
+    console.log('server is start',4000)
 })
