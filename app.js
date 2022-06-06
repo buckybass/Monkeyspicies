@@ -13,7 +13,11 @@ app.use(cookieParser())
 app.use(session({secret:'mysession',resave:false,saveUninitialized:false}))
 app.use(router)
 app.use(express.static(path.join(__dirname, 'public')))
-const port=process.env.PORT || 3000;
+
+let port = 8008
+if(port == null || port == ""){
+    port = 8008
+}
 app.listen(port, () => {
     console.log('server is start',port)
 })

@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 //เชื่อม mongoose
-const dburl = "mongodb://localhost:27017/prodcutDB"
+const dburl = "mongodb+srv://Admin:Password@monkey.yasgbdt.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(dburl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -17,7 +17,7 @@ let productSchema = mongoose.Schema({
 })
 
 //สร้าง Model
-let Product = mongoose.model("product",productSchema)
+let Product = mongoose.model("Monkey",productSchema)
 
 //ส่งออก model
 module.exports = Product
