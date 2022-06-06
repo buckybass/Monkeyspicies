@@ -28,8 +28,6 @@ router.get('/', (req, res) => {
 router.get('/form', (req, res) => {
     if (req.session.login) {
         res.render('form')
-        console.log(req.session)
-        console.log(req.sessionID)
     } else {
         res.render('login', { path: "form" })
     }
@@ -71,7 +69,6 @@ router.get('/manage', (req, res) => {
 router.post('/insert', upload.single("img"), (req, res) => {
     let data = new Product({
         name: req.body.name,
-        price: req.body.price,
         img: req.file.filename,
         detail: req.body.detail
     })

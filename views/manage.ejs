@@ -22,13 +22,12 @@
 <body>
     <%- include('header') %>
         <div class="container">
-            <h2>จัดการสินค้า</h2>
+            <h2>จัดการลิง</h2>
             <p>เพิ่ม ลบ แก้ไขข้อมูลในฐานข้อมูล <a href="/logout">ออกจากระบบ</a></p>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>ชื่อสินค้า</th>
-                        <th>ราคา</th>
+                        <th>ชื่อลิง</th>
                         <th>รายละเอียด</th>
                         <th>ลบ</th>
                         <th>แก้ไข</th>
@@ -39,9 +38,6 @@
                         <tr>
                             <td>
                                 <%=item.name%>
-                            </td>
-                            <td>
-                                <%=item.price%>
                             </td>
                             <td>
                                 <%=item.detail%>
