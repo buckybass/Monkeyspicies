@@ -13,7 +13,6 @@ app.use(cookieParser())
 app.use(session({secret:'mysession',resave:false,saveUninitialized:false}))
 app.use(router)
 app.use(express.static(path.join(__dirname, 'public')))
-
 let port = process.env.PORT;
 if(port == null || port == ""){
     port = 4000
