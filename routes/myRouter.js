@@ -1,10 +1,13 @@
 const express = require('express')
 const { redirect } = require('express/lib/response')
 const router = express.Router()
-const Product = require('../models/product')
 const upload = require('../controller/upload')
 const session = require('express-session')
-
+//api
+router.get('/api',require('../controller/api'))
+router.get('/api/id/:id',require('../controller/api_id'))
+router.get('/api/name/:name',require('../controller/api_name'))
+//
 router.get('/',require('../controller/index'))
 router.get('/form',require('../controller/form'))
 router.post('/checklogin',require('../controller/checklogin'))
@@ -15,7 +18,6 @@ router.get('/:id',require('../controller/detail'))
 router.post('/edit',require('../controller/edit'))
 router.post('/update', require('../controller/update'))
 router.get('/delete/:id',require('../controller/delete'))
-
 
 module.exports = router
 
@@ -37,4 +39,3 @@ module.exports = router
 //         res.redirect('/') // เปลี่ยน path ไปที่ '/' หน้าแรก
 //     }
 // })
-

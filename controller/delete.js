@@ -9,5 +9,4 @@ module.exports = (req, res) => {
     } else {
         res.render('login', { path: "manage" })
     }
-
 }
